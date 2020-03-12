@@ -1,0 +1,133 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+:root {
+    --yellow: #ffc600;
+    --yellow-transparent: rgb(255, 198, 0, 0.9);
+    --black: #272727;
+    --black-trasparent: rgb(39, 39, 39, 0.9);
+  }
+
+/* FANCY TITLE */
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+body {
+  background: #111;
+}
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+
+/* FANCY TITLE */
+
+
+  * > h2 {
+      text-decoration: underline;
+  }
+
+/*###### START OF GRID CONTAINER ######*/
+.container {
+    display: grid;
+    grid-template-rows: 50vh auto auto;
+    
+    background-color: darkkhaki;
+    background-image: url(brickWall2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*###### END OF GRID CONTAINER ######*/
+
+
+/*###### START OF NAME SECTION ######*/
+.name {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    color: var(--yellow);
+    background-color: var(--black);
+    /* background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%); */
+    /* font-size: 2rem; */
+}
+/*###### END OF NAME SECTION ######*/
+
+
+/*###### START OF CONTENT SECTION ######*/
+.content {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    
+    
+    padding: 20px;
+    /* grid-auto-rows: auto; */
+    /* align-items: center; */
+}
+
+.card {
+    background: var(--black-trasparent);
+    color: darkkhaki;
+    border-radius: 3%;
+    padding: 10px;
+    /* justify-self: start; */
+    opacity: 0.9;
+}
+.card:hover{
+    opacity: 1;
+}
+/*###### END OF CONTENT SECTION ######*/
+
+
+
+/*###### START OF CONTACT SECTION ######*/
+.contact {
+    display: grid;
+    grid-gap: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    
+    padding: 20px;
+    color: var(--yellow);
+    background-color: var(--black);
+    /* background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%); */
+}
+
+.linx {
+    /* background: moccasin; */
+    color: var(--yellow);
+    text-decoration: none;
+    margin: 10px;
+}
+/* .contact > div {
+    border: #333 1px solid;
+    padding: 1em
+} */
+/*###### END OF CONTACT SECTION ######*/
