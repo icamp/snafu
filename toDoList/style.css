@@ -18,6 +18,24 @@
       -30px 20px 40px dimgrey;
   }
   
+  .page {
+    background-image: url(/snafu/assets/brickWall2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .box {
+    /* border: 2px solid greenyellow; */
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 3%;
+    color: var(--yellow);
+    background-color: var(--black);
+  }
+
   .done {
     text-decoration: line-through;
   }
