@@ -43,8 +43,8 @@ function createListElement() {
     ul.appendChild(li);
     input.value = "";
 
-    var trashBtn = document.createElement("button");
-    trashBtn.innerHTML = "trash";
+    var trashBtn = document.createElement("p");
+    trashBtn.innerHTML = "X";
     li.appendChild(trashBtn);
     trashBtn.classList.add("trash");
     trashBtn.addEventListener("click", trashIt);
