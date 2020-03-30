@@ -7,7 +7,7 @@
   }
 
   .list {
-    width: fit-content;
+    width: max-content;
     margin: auto;
     margin-top: 3rem;
     padding: 3rem;
