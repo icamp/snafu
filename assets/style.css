@@ -1,27 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+
 *,*:before,*:after{
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    font-family: 'Khula', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
     --yellow: #ffc600;
-    --yellow-transparent: rgb(255, 198, 0, 0.9);
+    --yellow-transparent: rgb(255, 198, 0, 0.8);
     --black: #272727;
     --black-trasparent: rgb(39, 39, 39, 0.9);
   }
 
-/* FANCY TITLE */
 
-@import url(https://fonts.googleapis.com/css?family=Khula:700);
-body {
+/* START OF FANCY TITLE */
+/* @import url(https://fonts.googleapis.com/css?family=Khula:700); */
+/* body {
   background: #111;
-}
-.hidden {
+} */
+/* .hidden {
   opacity:0;
-}
+} */
 .console-container {
- 
   font-family:Khula;
   font-size:4em;
   text-align:center;
@@ -36,27 +38,21 @@ body {
   right:0;
   margin:auto;
 }
+
 .console-underscore {
-   display:inline-block;
+  display:inline-block;
   position:relative;
   top:-0.14em;
   left:10px;
 }
+/* END OF FANCY TITLE */
 
 
-/* FANCY TITLE */
-
-
-  * > h2 {
-      text-decoration: underline;
-  }
 
 /*###### START OF GRID CONTAINER ######*/
 .container {
     display: grid;
-    grid-template-rows: 50vh auto auto;
-    
-    background-color: darkkhaki;
+    grid-template-rows: 100vh auto auto auto;
     background-image: url(brickWall2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -65,43 +61,39 @@ body {
 /*###### END OF GRID CONTAINER ######*/
 
 
+
 /*###### START OF NAME SECTION ######*/
 .name {
     display: grid;
     align-items: center;
     justify-items: center;
-
     color: var(--yellow);
     background-color: var(--black);
-    /* background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%); */
-    /* font-size: 2rem; */
 }
 /*###### END OF NAME SECTION ######*/
+
+
+
+/*###### START OF RESUMEe SECTION ######*/
+.resume {
+  display: grid;
+  justify-items: center;
+  margin: 3rem;
+}
+/*###### END OF RESUMEe SECTION ######*/
+
 
 
 /*###### START OF CONTENT SECTION ######*/
 .content {
     display: grid;
-    grid-gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-items: center;
-    
-    
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: repeat(2, minmax(300px, 600px));
+    /* justify-items: center; */
+    margin: auto;
+    grid-gap: 4rem;
     padding: 20px;
     /* grid-auto-rows: auto; */
-    /* align-items: center; */
-}
-
-.card {
-    background: var(--black-trasparent);
-    color: darkkhaki;
-    border-radius: 3%;
-    padding: 10px;
-    /* justify-self: start; */
-    opacity: 0.9; 
-}
-.card:hover{
-    opacity: 1;
 }
 /*###### END OF CONTENT SECTION ######*/
 
@@ -110,24 +102,68 @@ body {
 /*###### START OF CONTACT SECTION ######*/
 .contact {
     display: grid;
-    grid-gap: 3em;
+    /* grid-gap: 3em; */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
-    
     padding: 20px;
     color: var(--yellow);
     background-color: var(--black);
-    /* background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%); */
+}
+/*###### END OF CONTACT SECTION ######*/
+
+
+
+/*###### START OF CARDS SECTION ######*/
+.card {
+  background: var(--black-trasparent);
+  color: darkkhaki;
+  border-radius: 3%;
+  padding: 10px;
+  opacity: 0.9; 
+  /* width: 550px; */
 }
 
+.card:hover{
+  opacity: 1;
+}
+/*###### END OF CARDS SECTION ######*/
+
+
+
+/*###### START OF ITEM SETTINGS ######*/
+* > h2 {
+  text-decoration: underline;
+}
+
+
 .linx {
-    /* background: moccasin; */
-    color: var(--yellow);
+    color: var(--yellow-transparent);
     text-decoration: none;
     margin: 10px;
 }
-/* .contact > div {
-    border: #333 1px solid;
-    padding: 1em
-} */
-/*###### END OF CONTACT SECTION ######*/
+.linx:hover {
+    color: var(--yellow);
+}
+/*###### END OF ITEM SETTINGS ######*/
+
+
+
+/*###### START OF RESPONSIVE SETTINGS ######*/
+@media (max-width: 1000px) {
+
+  .console-container {
+    height:max-content;
+    width:auto;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+/*###### END OF RESPONSIVE SETTINGS ######*/
