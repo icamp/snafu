@@ -89,8 +89,7 @@
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
     grid-template-columns: repeat(2, minmax(300px, 600px));
-    /* justify-items: center; */
-    margin: auto;
+    justify-content: center;
     grid-gap: 4rem;
     padding: 20px;
     /* grid-auto-rows: auto; */
@@ -102,9 +101,11 @@
 /*###### START OF CONTACT SECTION ######*/
 .contact {
     display: grid;
-    /* grid-gap: 3em; */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 3em;
     padding: 20px;
     color: var(--yellow);
     background-color: var(--black);
@@ -121,10 +122,16 @@
   padding: 10px;
   opacity: 0.9; 
   /* width: 550px; */
+
+  
+  border-bottom: 2px solid var(--black-trasparent);
+  border-right: 2px solid var(--black-trasparent);
 }
 
 .card:hover{
   opacity: 1;
+  border-bottom: 2px solid var(--yellow);
+  border-right: 2px solid var(--yellow);
 }
 /*###### END OF CARDS SECTION ######*/
 
@@ -140,9 +147,12 @@
     color: var(--yellow-transparent);
     text-decoration: none;
     margin: 10px;
+    border-bottom: 2px solid var(--black-trasparent);
+    justify-self: center;
 }
 .linx:hover {
     color: var(--yellow);
+    border-bottom: 2px solid var(--yellow);
 }
 /*###### END OF ITEM SETTINGS ######*/
 
@@ -163,7 +173,9 @@
 
   .contact {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
   }
 }
 /*###### END OF RESPONSIVE SETTINGS ######*/
