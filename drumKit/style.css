@@ -1,13 +1,18 @@
 html {
-  font-size: 10px;
+  /* font-size: 10px; */
   background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
   background-size: cover;
 }
 
-body,html {
+/* body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+} */
+
+body {
+  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover;
 }
 
 .keys {

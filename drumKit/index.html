@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/snafu/assets/styleVariables.css">
+  <link rel="stylesheet" href="/snafu/drumKit/style.css">
 </head>
 <body>
 
+  <section class="navBar">
+    <a class="linx" href="/snafu/index.html">Home</a>
+    <a class="linx" href="resume/index.html">Resume</a>
+    <a class="linx" href="mailto:campan.ionel@gmail.com">eMail</a>
+    <a class="linx" href="https://github.com/icamp" target="_blank">Github</a>
+    <a class="linx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
+    <div class="dropdown">
+      <span class="dropbtn linx">Dropdown</span>
+      <div class="dropdown-content">
+          <a class="linx" href="#">Background Generator</a>
+          <a class="linx" href="#">To Do List</a>
+          <a class="linx" href="#">Clock</a>
+          <a class="linx" href="#">CSS Variables</a>
+          <a class="linx" href="#">Flex Panels Gallery</a>
+          <a class="linx" href="#">Filtering list</a>
+          <a class="linx" href="#">HTML 5 Canvas</a>
+          <a class="linx" href="#">Multiple select with Shift key</a>
+          <a class="linx" href="#">Custom Video Player</a>
+          <a class="linx" href="#">Konami Code</a>
+          <a class="linx" href="#">Sliding Images</a>
+          <a class="linx" href="#">Robofriends</a>
+      </div>
+  </div>
+  </section>
 
   <div class="keys">
     <div data-key="65" class="key">
@@ -44,7 +69,7 @@
     <div data-key="76" class="key">
       <kbd>L</kbd>
       <span class="sound">tink</span>
-    </div>
+    </div>  
   </div>
 
   <audio data-key="65" src="sounds/clap.wav"></audio>
@@ -57,51 +82,7 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-<script>
+<script src="script.js"></script>
 
-  /* 
-  e is the event  
-  */
-  function playSound(e) {
-    // console.log(e);
-    // console.log(e.keyCode);
-
-    /*
-    check if there is an 'audio' element on the page 
-    that has a data-key of --number--
-    [data-key="${e.keyCode}"] is an attribute selector
-    */
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
-    // console.log(audio);
-
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
-    // console.log(key);
-
-    if(!audio) return; /*stops the function if there's no audio*/
-    
-    audio.currentTime = 0; /*rewind to start so successive taps play*/
-    audio.play();
-    key.classList.add('playing');
-    }
-
-    function removeTransition(e){
-      // console.log(e);
-      if(e.propertyName !== 'transform') return; /*skip what is not a transform*/
-      // console.log(e.propertyName);
-      this.classList.remove('playing');
-    }
-
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-    /* 
-    listening for a key up event in the 'window' element
-    when that happens, the function 'playSound' is executed
-    */
-    window.addEventListener('keydown', playSound);
-
-</script>
-
-
-</body>
+</body> 
 </html>

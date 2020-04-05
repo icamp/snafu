@@ -1,18 +1,25 @@
+
+// Caching selectors to variables
 var css = document.querySelector('h3');
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var random = document.getElementById("random");
 
-color1.value = "#ff0000";
-color2.value = "#ffff00";
-css.textContent = 
-    body.style.background 
-    + "linear-gradient(to right, rgb(255, 0, 0) , rgb(255, 255, 0);";
 
-/*
-sets background and text on screen
-*/
+// Set the initial color inputs to match the background
+        /*
+            broke after adding global background
+            temporarily fixed by calling setColor() on page load
+        */
+// color1.value = "#ff0000";
+// color2.value = "#ffff00";
+// css.textContent = 
+//     body.style.background 
+//     + "linear-gradient(to right, rgb(255, 0, 0) , rgb(255, 255, 0);";
+
+
+// Sets background and text on screen
 function setColor() {
     body.style.background = 
         "linear-gradient(to right, "
@@ -24,9 +31,8 @@ function setColor() {
     css.textContent = body.style.background + ";";
 }
 
-/*
-sets background to random values
-*/
+
+// Sets background to random values
 function randomiseColors() {
 
     var leftColor = getRandomColorCode();
@@ -45,9 +51,7 @@ function randomiseColors() {
 }
 
 
-/*
-generates random color code
-*/
+// Generates random color code
 function getRandomColorCode() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -62,3 +66,4 @@ function getRandomColorCode() {
 color1.addEventListener("input", setColor);
 color2.addEventListener("input", setColor);
 random.addEventListener("click", randomiseColors);
+window.addEventListener('load', setColor);

@@ -12,7 +12,7 @@
 // fancy title
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Hello World.', 'I am Ionel', "I'm a developer"], 'text',['tomato','var(--yellow)','darkkhaki']);
+consoleText(['Hello World.', 'I am Ionel', "I'm a developer"], 'text',['white','var(--yellow)','tomato']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];

@@ -1,61 +1,67 @@
-  
-  .page {
-    background-image: url(/snafu/assets/brickWall2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
 
+.list {
+  width: 50vw;
+  margin: auto;
+  padding: 3rem;
+  margin-top: 2.5rem;
+  border-radius: 30px;
+  color: var(--yellow);
+  background-color: var(--black);
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.trash {
+  color: red;
+}
+
+* {
+  text-align: center;
+}
+
+ul {
+  margin-top: 1rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+li:nth-child(odd) {
+  background-color: #030202;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+.inputBox {
+  background-color: var(--yellow);
+  opacity: 0.5;
+  border-radius: 20px;
+  border: none;
+}
+
+#enter {
+  background-color: var(--yellow);
+  opacity: 0.8;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+#enter:hover {
+  opacity: 2;
+}
+
+@media (max-width: 1000px) {
   .list {
-    width: max-content;
-    margin: auto;
-    margin-top: 3rem;
-    padding: 3rem;
-    border-radius: 3%;
-    color: var(--yellow);
-    background-color: var(--black);
+    width: 90vw;
   }
-
-  .done {
-    text-decoration: line-through;
-    opacity: 0.5;
-    
-  }
-
-  .trash {
-    color: red;
-  }
-
-  ul {
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    margin-left: -2rem;
-  }
-
-  li {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  li:hover {
-    font-weight: bold;;
-  }
-
-  .inputBox {
-    background-color: var(--yellow);
-    opacity: 0.5;
-    border-radius: 20px;
-    border: none;
-  }
-
-  #enter {
-    background-color: var(--yellow);
-    opacity: 0.8;
-    border: none;
-    border-radius: 90%;
-    margin-left: 10px;
-  }
-
-  #enter:hover {
-    opacity: 2;
-  }
+}

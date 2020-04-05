@@ -1,21 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Khula:700);
 
-
-*,*:before,*:after{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Khula', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --yellow: #ffc600;
-    --yellow-transparent: rgb(255, 198, 0, 0.8);
-    --black: #272727;
-    --black-trasparent: rgb(39, 39, 39, 0.9);
-  }
-
-
-/* START OF FANCY TITLE */
+/*###### START OF FANCY TITLE ######*/
 /* @import url(https://fonts.googleapis.com/css?family=Khula:700); */
 /* body {
   background: #111;
@@ -26,156 +10,121 @@
 .console-container {
   font-family:Khula;
   font-size:4em;
-  text-align:center;
+  /* text-align:center; */
   height:200px;
   width:600px;
-  display:block;
-  position:absolute;
+  /* display:block;
+  position:absolute; */
   color:white;
-  top:0;
+  /* top:0;
   bottom:0;
   left:0;
   right:0;
-  margin:auto;
+  margin:auto; */
 }
 
 .console-underscore {
   display:inline-block;
-  position:relative;
-  top:-0.14em;
-  left:10px;
+  /* position:relative; */
+  /* top:-0.14em; */
+  /* left:10px; */
 }
-/* END OF FANCY TITLE */
+/*###### END OF FANCY TITLE ######*/
 
 
-
-/*###### START OF GRID CONTAINER ######*/
-.container {
-    display: grid;
-    grid-template-rows: 100vh auto auto auto;
-    background-image: url(brickWall2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-/*###### END OF GRID CONTAINER ######*/
-
-
-
-/*###### START OF NAME SECTION ######*/
+/*###### HEADER SETTINGS START ######*/
 .name {
     display: grid;
+    grid-template-rows: 100vh;
     align-items: center;
     justify-items: center;
-    color: var(--yellow);
     background-color: var(--black);
 }
-/*###### END OF NAME SECTION ######*/
+/*###### HEADER SETTINGS END ######*/
 
 
-
-/*###### START OF RESUMEe SECTION ######*/
-.resume {
-  display: grid;
-  justify-items: center;
-  margin: 3rem;
-}
-/*###### END OF RESUMEe SECTION ######*/
-
-
-
-/*###### START OF CONTENT SECTION ######*/
-.content {
+/*###### MENU BAR SETTINGS START ######*/
+/* .navBar {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-    grid-template-columns: repeat(2, minmax(300px, 600px));
-    justify-content: center;
-    grid-gap: 4rem;
-    padding: 20px;
-    /* grid-auto-rows: auto; */
-}
-/*###### END OF CONTENT SECTION ######*/
-
-
-
-/*###### START OF CONTACT SECTION ######*/
-.contact {
-    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     justify-content: center;
     align-items: center;
-
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 3em;
-    padding: 20px;
-    color: var(--yellow);
+    position: sticky;
+    z-index:1;
+    top: 0;
     background-color: var(--black);
+} */
+/*###### MENU BAR SETTINGS END ######*/
+
+
+/*###### CONTENT SETTINGS START ######*/
+.content {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  grid-template-columns: repeat(2, minmax(300px, 600px));
+  justify-content: center;
+  grid-gap: 4rem;
+  padding: 20px;
 }
-/*###### END OF CONTACT SECTION ######*/
+/*###### CONTENT SETTINGS END ######*/
 
 
-
-/*###### START OF CARDS SECTION ######*/
+/*###### CARDS SETTINGS START ######*/
 .card {
   background: var(--black-trasparent);
-  color: darkkhaki;
-  border-radius: 3%;
+  /* color: var(--yellow-transparent); */
+  color: #959494;
+  border-radius: 15px;
   padding: 10px;
   opacity: 0.9; 
-  /* width: 550px; */
-
-  
   border-bottom: 2px solid var(--black-trasparent);
   border-right: 2px solid var(--black-trasparent);
 }
 
 .card:hover{
-  opacity: 1;
   border-bottom: 2px solid var(--yellow);
   border-right: 2px solid var(--yellow);
+  opacity: 1;
+  color: var(--yellow-transparent);
 }
-/*###### END OF CARDS SECTION ######*/
+/*###### CARDS SETTINGS END ######*/
 
 
 
-/*###### START OF ITEM SETTINGS ######*/
+/*###### ELEMENTS SETTINGS START ######*/
 * > h2 {
   text-decoration: underline;
+  color: var(--yellow-transparent);
 }
 
 
-.linx {
+/* .linx {
     color: var(--yellow-transparent);
+    color: #959494;
     text-decoration: none;
-    margin: 10px;
-    border-bottom: 2px solid var(--black-trasparent);
     justify-self: center;
+    margin: 10px;
+    border-bottom: 2px solid transparent;
 }
 .linx:hover {
     color: var(--yellow);
     border-bottom: 2px solid var(--yellow);
-}
-/*###### END OF ITEM SETTINGS ######*/
+} */
+/*###### ELEMENTS SETTINGS END ######*/
 
 
 
-/*###### START OF RESPONSIVE SETTINGS ######*/
+/*###### RESPONSIVE SETTINGS START ######*/
 @media (max-width: 1000px) {
 
   .console-container {
     height:max-content;
-    width:auto;
+    width:85vw;
   }
 
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-
-  .contact {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
-  }
 }
-/*###### END OF RESPONSIVE SETTINGS ######*/
+/*###### RESPONSIVE SETTINGS END ######*/
