@@ -3,8 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="/snafu/assets/styleVariables.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <section class="navBar">
+    <a class="linx" href="/snafu/index.html">Home</a>
+    <a class="linx" href="/snafu/resume/index.html">Resume</a>
+    <a class="linx" href="mailto:campan.ionel@gmail.com">eMail</a>
+    <a class="linx" href="https://github.com/icamp" target="_blank">Github</a>
+    <a class="linx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
+    <div class="dropdown">
+        <span class="dropbtn linx">Dropdown</span>
+        <div class="dropdown-content">
+          <a class="linx" href="/snafu/backgroundGenerator/index.html">Background Generator</a>
+            <a class="linx" href="/snafu/toDoList/index.html">To Do List</a>
+            <a class="linx" href="/snafu/drumKit/index.html">Drum kit</a>
+            <a class="linx" href="/snafu/clock/index.html">Clock</a>
+            <a class="linx" href="/snafu/cssVariables/index.html">CSS Variables</a>
+            <a class="linx" href="/snafu/flexPanelGallery/index.html">Flex Panels Gallery</a>
+            <a class="linx" href="/snafu/filterList/index.html">Filtering list</a>
+            <a class="linx" href="/snafu/HTML5Canvas/index.html">HTML 5 Canvas</a>
+            <a class="linx" href="/snafu/multipleSelect/index.html">Multiple select with Shift key</a>
+            <a class="linx" href="/snafu/customVideoPlayer/index.html">Custom Video Player</a>
+            <a class="linx" href="/snafu/keySequenceDetection/index.html">Konami Code</a>
+            <a class="linx" href="https://icamp.github.io/robofriends/">Robofriends</a>
+        </div>
+    </div>
+  </section>  
 
   <div class="site-wrap">
 
@@ -42,111 +69,7 @@
 
   </div>
 
-  <script>
-    function debounce(func, wait = 20, immediate = true) {
-      var timeout;
-      return function() {
-        var context = this, args = arguments;
-        var later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    }
-
-    // select all the images that will be listened
-    const sliderImages = document.querySelectorAll('.slide-in');
-
-    // write a function that will run everytime the user scrolls
-    function checkslide(e) {
-      // console.count(e);
-      // loop over every image and calculate where it needs to be shown
-      // console.log(window.scrollY);
-      sliderImages.forEach(sliderImage => {
-        const slideInAt = (window.scrollY + window.innerHeight) // the pixel level at the bottom of the viewport, 
-                                                                // where the sliding should start 
-                            - sliderImage.height / 2; // halfway through the image
-        console.log(slideInAt);
-
-        const imageBottom = sliderImage.offsetTop + sliderImage.height; //offsetTop is the distance from top of page to top of img
-        const isHalfShown = slideInAt > sliderImage.offsetTop; // make sure that the slideInAt value is greater than the top of where the actual img is
-        const isNotScrolledPast = window.scrollY < imageBottom; // make sure we're not scrolled all the way past the image
-
-        if (isHalfShown && isNotScrolledPast) {
-          sliderImage.classList.add('active');
-        } else {
-          sliderImage.classList.remove('active');
-        }
-      });
-    }
-
-    // run the function checkSlide when the window is scrolled
-    window.addEventListener('scroll', debounce(checkslide));
-    
-  </script>
-
-  <style>
-    html {
-      box-sizing: border-box;
-      background: #ffc600;
-      font-family: 'helvetica neue';
-      font-size: 20px;
-      font-weight: 200;
-    }
-    
-    body {
-      margin: 0;
-    }
-    
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
-
-    h1 {
-      margin-top: 0;
-    }
-
-    .site-wrap {
-      max-width: 700px;
-      margin: 100px auto;
-      background: white;
-      padding: 40px;
-      text-align: justify;
-    }
-
-    .align-left {
-      float: left;
-      margin-right: 20px;
-    }
-
-    .align-right {
-      float: right;
-      margin-left: 20px;
-    }
-
-    .slide-in {
-      opacity: 0;
-      transition: all .5s;
-    }
-
-    .align-left.slide-in {
-      transform: translateX(-30%) scale(0.95);
-    }
-    
-    .align-right.slide-in {
-      transform: translateX(30%) scale(0.95);
-    }
-
-    .slide-in.active {
-      opacity: 1;
-      transform: translateX(0%) scale(1);
-    }
-
-  </style>
+  <script src="script.js"></script>
 
 </body>
 </html>

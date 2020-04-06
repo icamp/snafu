@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Key Detection</title>
-  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
-</head>
-<body>
-  <h1>Try typing 'yeehaa'</h1>
-<script>
+
 
   const pressed = [];           // an empty array to which all the pressed keys will be pushed
-  const secretCode = 'yeehaa'   // the word we are looking for
+  const secretCode = 'yes'   // the word we are looking for
   window.addEventListener('keyup', (e) => {
     // console.log(e);   // shows which key was pressed
     pressed.push(e.key);  // pushes the pressed key to the array
@@ -27,6 +18,3 @@
     }
     // console.log(pressed);
   })
-</script>
-</body>
-</html>

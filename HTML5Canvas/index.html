@@ -3,77 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML5 Canvas</title>
+  <link rel="stylesheet" href="/snafu/assets/styleVariables.css">
 </head>
 <body>
-<canvas id="draw" width="800" height="800"></canvas>
-<script>
 
-  // #1 grab that canvas
-  const canvas = document.querySelector('#draw');
-  // #2 drawing is done on something called the context
-  const ctx = canvas.getContext('2d');
-  // #3 resize the canvas
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  //
-  ctx.strokeStyle = '#BADA55';  // the color drawing will start with
-  // ctx.lineJoin = 'round'; // shape of the end of the line   
-  ctx.lineWidth = 100;
-  ctx.globalCompositeOperation = 'multiply'; // google & play with different values
-  //
-  let isDrawing = false;
-  let lastX = 0;  // position of start of the line
-  let lastY = 0;  // position of end of the line
-  let hue = 0;
-  let direction = true;
-  //
-  function draw(e) {
-    if (!isDrawing) return;
-    // console.log(e);
-    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-    // ctx.lineWidth = hue;
-    ctx.beginPath();  
-    ctx.moveTo(lastX, lastY); // start from
-    ctx.lineTo(e.offsetX, e.offsetY); // go to
-    ctx.stroke();
-    // lastX = e.offsetX;
-    // lastY = e.offsetY;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
+  <section class="navBar">
+    <a class="linx" href="/snafu/index.html">Home</a>
+    <a class="linx" href="resume/index.html">Resume</a>
+    <a class="linx" href="mailto:campan.ionel@gmail.com">eMail</a>
+    <a class="linx" href="https://github.com/icamp" target="_blank">Github</a>
+    <a class="linx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
+    <div class="dropdown">
+        <span class="dropbtn linx">Dropdown</span>
+        <div class="dropdown-content">
+            <a class="linx" href="/snafu/backgroundGenerator/index.html">Background Generator</a>
+            <a class="linx" href="/snafu/toDoList/index.html">To Do List</a>
+            <a class="linx" href="/snafu/drumKit/index.html">Drum kit</a>
+            <a class="linx" href="/snafu/clock/index.html">Clock</a>
+            <a class="linx" href="/snafu/cssVariables/index.html">CSS Variables</a>
+            <a class="linx" href="/snafu/flexPanelGallery/index.html">Flex Panels Gallery</a>
+            <a class="linx" href="/snafu/filterList/index.html">Filtering list</a>
+            <a class="linx" href="/snafu/multipleSelect/index.html">Multiple select with Shift key</a>
+            <a class="linx" href="/snafu/customVideoPlayer/index.html">Custom Video Player</a>
+            <a class="linx" href="/snafu/keySequenceDetection/index.html">Konami Code</a>
+            <a class="linx" href="/snafu/slideInOnScroll/index.html">Sliding Images</a>
+            <a class="linx" href="https://icamp.github.io/robofriends/">Robofriends</a>
+        </div>
+    </div>
+  </section>  
 
-    hue++;
-    if (hue >= 360) {
-      hue = 0;
+  <h1>Click & drag below</h1>
+  <canvas id="draw" width="800" height="800"></canvas>
+
+  <script src="script.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      background: none;
     }
-
-    if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-      direction = !direction;
-    }
-
-    if(direction) {
-      ctx.lineWidth++;
-    } else {
-      ctx.lineWidth--;
-    }
-      
-
-  }
-
-  canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
-  });
-  canvas.addEventListener('mouseup', () => isDrawing = false);
-  canvas.addEventListener('mouseout', () => isDrawing = false);
-  
-
-
-</script>
-<style>
-  html, body {
-    margin: 0;
-  }
-</style>
+  </style>
 
 </body>
 </html>

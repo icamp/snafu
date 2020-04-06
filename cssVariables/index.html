@@ -4,9 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Scoped CSS Variables and JS</title>
+  <link rel="stylesheet" href="/snafu/assets/styleVariables.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <section class="navBar">
+    <a class="linx" href="/snafu/index.html">Home</a>
+    <a class="linx" href="resume/index.html">Resume</a>
+    <a class="linx" href="mailto:campan.ionel@gmail.com">eMail</a>
+    <a class="linx" href="https://github.com/icamp" target="_blank">Github</a>
+    <a class="linx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
+    <div class="dropdown">
+        <span class="dropbtn linx">Dropdown</span>
+        <div class="dropdown-content">
+          <a class="linx" href="/snafu/backgroundGenerator/index.html">Background Generator</a>
+            <a class="linx" href="/snafu/toDoList/index.html">To Do List</a>
+            <a class="linx" href="/snafu/drumKit/index.html">Drum kit</a>
+            <a class="linx" href="/snafu/clock/index.html">Clock</a>
+            <a class="linx" href="/snafu/flexPanelGallery/index.html">Flex Panels Gallery</a>
+            <a class="linx" href="/snafu/filterList/index.html">Filtering list</a>
+            <a class="linx" href="/snafu/HTML5Canvas/index.html">HTML 5 Canvas</a>
+            <a class="linx" href="/snafu/multipleSelect/index.html">Multiple select with Shift key</a>
+            <a class="linx" href="/snafu/customVideoPlayer/index.html">Custom Video Player</a>
+            <a class="linx" href="/snafu/keySequenceDetection/index.html">Konami Code</a>
+            <a class="linx" href="/snafu/slideInOnScroll/index.html">Sliding Images</a>
+            <a class="linx" href="https://icamp.github.io/robofriends/">Robofriends</a>
+        </div>
+    </div>
+  </section>
+
   <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
   <div class="controls">
@@ -22,81 +49,7 @@
 
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
-  <style>
-    /* 
-      Declaring CSS variables on root which is similar to declaring on HTML element 
-      (sort of the highest level)
-    */
-    :root {
-      --base: #ffc600;
-      --spacing: 10px;
-      --blur: 10px;
-    }
-
-    /* 
-      to use a variable in CSS we use 'var()':  
-    */
-    img {
-      padding: var(--spacing);
-      background: var(--base);
-      filter: blur(var(--blur));
-    }
-
-    .hl {
-      color: var(--base);
-    }
-
-    /*
-      misc styles, nothing to do with CSS variables
-    */
-
-    body {
-      text-align: center;
-      background: #193549;
-      color: white;
-      font-family: 'helvetica neue', sans-serif;
-      font-weight: 100;
-      font-size: 50px;
-    }
-
-    .controls {
-      margin-bottom: 50px;
-    }
-
-    input {
-      width: 100px;
-    }
-  </style>
-
-  <script>
-    // selecting all inputs on the page
-    const inputs = document.querySelectorAll(".controls input");
-
-    function handleUpdate() {
-      // console.log(this.value);
-      /*
-      grabbing the 'px' suffix from dataset which is an object 
-      that will contain all of the 'data' atributes from a specific element (in this case, from 'sizing')
-      or nothing ( ||'' )for those that don't have one, otherwise it will append undefined on the end
-      */
-      const suffix = this.dataset.sizing || '';
-      // console.log(this.dataset);
-      // console.log(suffix);
-      console.log(this.name);
-      
-      /*
-      to select a CSS value we select the entire document ( at :root )
-      then set a property of base, spacing or blur (matching names for the existing vars)
-      here we select 'this.name' and set it to 'this.value' and concatenate it with the suffix variable
-      */
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
-
-    // listen for a change event on each of the inputs
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
