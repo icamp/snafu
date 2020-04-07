@@ -1,4 +1,4 @@
-html {
+/* html {
   box-sizing: border-box;
   background: #ffc600;
   font-family: 'helvetica neue';
@@ -8,7 +8,7 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 
 input {
   width: 100%;

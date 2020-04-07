@@ -1,12 +1,12 @@
-*,*:before,*:after{
+/* *,*:before,*:after{
     box-sizing: border-box;
     font-family: sans-serif;
-}
+} */
 
 html {
-    max-width: 21cm;
-    max-height: 29.7cm;
-    margin: auto;
+    /* max-width: 21cm;
+    max-height: 29.7cm; */
+    /* margin: auto; */
     /* background-color: #3E536A; */
     /* background: linear-gradient(to bottom, #3A4857, #364C52); */
     background-image: url(/snafu/assets/brickWall2.jpg);
@@ -16,10 +16,11 @@ html {
 }
 
 .container {
-    /* max-width: 21cm;
-    max-height: 29.7cm; */
+    max-width: 21cm;
+    max-height: 29.7cm;
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 50px auto;
 }
 
 /* ########################################### */

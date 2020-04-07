@@ -1,12 +1,12 @@
-html {
+/* html {
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -16,7 +16,7 @@ body {
   background-size: cover;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .player {
   max-width: 750px;
@@ -25,6 +25,8 @@ body {
   position: relative;
   font-size: 0;
   overflow: hidden;
+
+  margin: 100px auto;
 }
 
 /* This css is only applied when fullscreen is active. */

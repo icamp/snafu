@@ -6,6 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Khula', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Amatic SC'; */
 }
 
 :root {
@@ -49,7 +50,7 @@ body {
 }
 
 
-/* ##### DROPDOWN ##### */
+/* ##### DROPDOWN START ##### */
 /* Style The Dropdown Button */
 .dropbtn {
     /* background-color: #4CAF50; */
@@ -86,7 +87,7 @@ body {
     display: block;
   }
   
-  Change color of dropdown links on hover
+  /* Change color of dropdown links on hover */
   /* .dropdown-content a:hover {background-color: #f1f1f1} */
   .dropdown-content a:hover {border: 2px solid var(--yellow)}
   
@@ -99,3 +100,4 @@ body {
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+  /* ##### DROPDOWN END ##### */

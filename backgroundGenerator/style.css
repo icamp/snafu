@@ -1,11 +1,9 @@
 body {
-	font: 'Khula', 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-    top: 15%;
-	background: linear-gradient(to right, rgb(255, 0, 0) , rgb(255, 255, 0)); /* Standard syntax */
+    /* text-transform: uppercase; */
+    /* top: 15%; */
+	background: linear-gradient(to right, rgb(255, 0, 0) , rgb(255, 255, 0)); 
 }
 
 h1 {
@@ -16,6 +14,10 @@ h1 {
     letter-spacing: .5em;
     width: 100%;
     margin-top: 2rem;
+}
+
+h2 {
+    letter-spacing: .5em;
 }
 
 h3 {
@@ -31,7 +33,6 @@ h3 {
 }
 
 #random {
-    /* background-color: var(--yellow); */
     border-style: none;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
