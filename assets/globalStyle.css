@@ -19,7 +19,7 @@
 
 body {
     font: 'Khula', 'Raleway', sans-serif;
-    background-image: url(/snafu/assets/brickWall2.jpg);
+    background-image: url(brickWall2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
