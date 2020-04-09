@@ -8,15 +8,19 @@ var random = document.getElementById("random");
 
 
 // Set the initial color inputs to match the background
-        /*
-            broke after adding global background
-            temporarily fixed by calling setColor() on page load
-        */
-// color1.value = "#ff0000";
-// color2.value = "#ffff00";
-// css.textContent = 
-//     body.style.background 
-//     + "linear-gradient(to right, rgb(255, 0, 0) , rgb(255, 255, 0);";
+function setInitialColor() {
+    color1.value = "#ff0000";
+    color2.value = "#ffff00";
+
+    body.style.background = 
+        "linear-gradient(to right, "
+        + color1.value
+        + ", "
+        + color2.value
+        + ")";
+
+    css.textContent = body.style.background + ";";
+}
 
 
 // Sets background and text on screen
@@ -66,4 +70,4 @@ function getRandomColorCode() {
 color1.addEventListener("input", setColor);
 color2.addEventListener("input", setColor);
 random.addEventListener("click", randomiseColors);
-window.addEventListener('load', setColor);
+window.addEventListener('load', setInitialColor);
