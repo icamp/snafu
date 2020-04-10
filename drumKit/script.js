@@ -1,20 +1,21 @@
 
 function playSound(e) {
-/*
-check if there is an 'audio' element on the page 
-that has a data-key of --number--
-[data-key="${e.keyCode}"] is an attribute selector
-*/
-const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
-const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
+    /*
+    check if there is an 'audio' element on the page 
+    that has a data-key of --number--
+    [data-key="${e.keyCode}"] is an attribute selector
+    */
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
 
-if(!audio) return; /*stops the function if there's no audio*/
+    if(!audio) return; /*stops the function if there's no audio*/
 
-audio.currentTime = 0; /*rewind to start so successive taps play*/
-audio.play();
-key.classList.add('playing');
+    audio.currentTime = 0; /*rewind to start so successive taps play*/
+    audio.play();
+    key.classList.add('playing');
 }
 
+// remove play effects when transition ends
 function removeTransition(e){
     // console.log(e);
     if(e.propertyName !== 'transform') return; /*skip what is not a transform*/
