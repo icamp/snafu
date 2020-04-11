@@ -1,22 +1,24 @@
-  // #1 grab that canvas
+  // cache the canvas
   const canvas = document.querySelector('#draw');
-  // #2 drawing is done on something called the context
+
+  // drawing is done on something called the context
   const ctx = canvas.getContext('2d');
-  // #3 resize the canvas
+
+  // resize the canvas
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  //
+
   ctx.strokeStyle = '#BADA55';  // the color drawing will start with
   // ctx.lineJoin = 'round'; // shape of the end of the line   
   ctx.lineWidth = 100;
-  ctx.globalCompositeOperation = 'multiply'; // google & play with different values
-  //
+  ctx.globalCompositeOperation = 'multiply'; // to google & try different values
+  
   let isDrawing = false;
   let lastX = 0;  // position of start of the line
   let lastY = 0;  // position of end of the line
   let hue = 0;
   let direction = true;
-  //
+  
   function draw(e) {
     if (!isDrawing) return;
     // console.log(e);
