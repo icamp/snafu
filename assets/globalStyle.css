@@ -112,4 +112,12 @@ body {
     /* background-color: #3e8e41; */
     background-color: var(--yellow-transparent);
   }
+
+  .dropdown {
+    margin-left: 15rem;
+  }
+
+  .home {
+    margin-right: 15rem;
+  }
   /* ##### DROPDOWN END ##### */
