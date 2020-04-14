@@ -100,7 +100,7 @@ body {
   
   /* Change color of dropdown links on hover */
   /* .dropdown-content a:hover {background-color: #f1f1f1} */
-  .dropdown-content a:hover {border: 2px solid var(--yellow)}
+  .dropdown-content a:hover {border: 2px dotted var(--yellow)}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
@@ -119,5 +119,9 @@ body {
 
   .home {
     margin-right: 15rem;
+  }
+
+  .active {
+    border: 2px solid var(--yellow);
   }
   /* ##### DROPDOWN END ##### */
