@@ -1,23 +1,8 @@
-/* *,*:before,*:after{
-    box-sizing: border-box;
-    font-family: sans-serif;
-} */
 
-html {
-    /* max-width: 21cm;
-    max-height: 29.7cm; */
-    /* margin: auto; */
-    /* background-color: #3E536A; */
-    /* background: linear-gradient(to bottom, #3A4857, #364C52); */
-    /* background-image: url(/snafu/assets/brickWall2.jpg); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .container {
     max-width: 21cm;
-    max-height: 29.7cm;
+    /* max-height: 29.7cm; */
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     margin: 50px auto;
@@ -30,7 +15,7 @@ html {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    padding: 1rem;
+    /* padding: 1rem; */
     background: linear-gradient(to bottom right, #374453, #595F67);
     color: silver;
 }
@@ -40,22 +25,29 @@ html {
     flex-direction: column;
     justify-content: center;
     flex: 5;
-    padding: 1rem;
+    /* padding: 1rem; */
     /* background: #F5F5EF;  */
     background: silver;
-
     /* flex-wrap: wrap; */
 }
 
 .card {
     flex: 1 1 auto;
     /* flex-shrink: auto; */
+    padding: .8rem;
 }
 
 /* ########################################### */
 
 .title {
     color: #C8A268;
+}
+
+.pos {
+    font-size: 1.1rem;
+    padding-right: 5rem;
+    border-bottom: 1px solid black;
+    display: inline-block;
 }
 
 .link {
@@ -75,40 +67,46 @@ h3 {
 
 /* ########################################### */
 
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ########################################### */
+
 @media print {
     body, html {
         margin: 0;
         padding: 0; 
         zoom: 90%;
     }
-
+    
     .container {
         /* display: flex;
         width: 21cm;
         height: 29.7cm;  */
         box-shadow: none;
     }
-
+    
     *, .title, .link {
         color: black;
     }
-
+    
     .hero {
         border-right: 2px solid black;
     }
-
-    .progress {
-        /* height: 0.8rem;
-        background: black; */
-        
-    }
-
+    
+    /* .progress {
+    } */
+    
     .en {
         border-bottom: 10px solid black;
         width: 4rem;
         
     }
-
+    
     .ro {
         border-bottom: 0.8rem solid black;
         width: 5rem;
