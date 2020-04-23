@@ -61,7 +61,7 @@
 }
 progress::-webkit-progress-value { background: silver; }
 
-h3 {
+.hero h3 {
     margin-bottom: 0.5rem;
 }
 
@@ -84,9 +84,8 @@ h3 {
     }
     
     .container {
-        /* display: flex;
-        width: 21cm;
-        height: 29.7cm;  */
+        display: flex;
+        flex-direction: column;
         box-shadow: none;
     }
     
@@ -98,13 +97,9 @@ h3 {
         border-right: 2px solid black;
     }
     
-    /* .progress {
-    } */
-    
     .en {
         border-bottom: 10px solid black;
         width: 4rem;
-        
     }
     
     .ro {
