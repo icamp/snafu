@@ -121,6 +121,10 @@ body {
     margin-right: 15rem;
   }
 
+  .download {
+    color: whitesmoke;
+  }
+
   .active {
     border: 2px solid var(--yellow);
   }
