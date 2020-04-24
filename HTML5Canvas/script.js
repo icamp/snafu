@@ -58,11 +58,23 @@ function draw(e) {
 }
 
 window.addEventListener('mousedown', infoRemove, {once: true});
+window.addEventListener('touchstart', infoRemove, {once: true});
 
 canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('touchmove', draw);
+
 canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
+canvas.addEventListener('touchstart', (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+
 canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('touchend', () => isDrawing = false);
+
 canvas.addEventListener('mouseout', () => isDrawing = false);
+canvas.addEventListener('touchcancel', () => isDrawing = false);
