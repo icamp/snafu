@@ -55,7 +55,7 @@
     color: silver;
 }
 
-.progress {
+.language  {
     height: 0.7rem;
     background: silver;
 }
@@ -65,14 +65,18 @@ progress::-webkit-progress-value { background: silver; }
     margin-bottom: 0.5rem;
 }
 
+.print {
+    display: none;
+}
+
 /* ########################################### */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .container {
         display: flex;
         flex-direction: column;
     }
-}
+} */
 
 /* ########################################### */
 
@@ -80,12 +84,18 @@ progress::-webkit-progress-value { background: silver; }
     body, html {
         margin: 0;
         padding: 0; 
-        zoom: 90%;
+        zoom: 90%;    
+        /* max-width: 21cm;
+        max-height: 29.7cm; */
     }
+
+    body > *:not(.container) {
+        display: none;
+      }
     
     .container {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         box-shadow: none;
     }
     
@@ -96,15 +106,23 @@ progress::-webkit-progress-value { background: silver; }
     .hero {
         border-right: 2px solid black;
     }
+
+    .print {
+        display: inherit;
+    }
+
+    .screen {
+        display: none;
+    }
     
-    .en {
+    /* .lang_en {
         border-bottom: 10px solid black;
         width: 4rem;
     }
     
-    .ro {
+    .lang_ro {
         border-bottom: 0.8rem solid black;
         width: 5rem;
     }
-    /* progress::-webkit-progress-value { background: black; } */
+    progress::-webkit-progress-value { background: black; } */
 }
