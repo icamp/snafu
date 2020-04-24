@@ -31,3 +31,4 @@ listening for a key up event in the 'window' element
 when that happens, the function 'playSound' is executed
 */
 window.addEventListener('keydown', playSound);
+window.addEventListener('touchstart', playSound);
