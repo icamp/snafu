@@ -8,7 +8,6 @@
   opacity:0;
 } */
 .console-container {
-  font-family:Khula;
   font-size:4em;
   /* text-align:center; */
   height:200px;
@@ -115,7 +114,7 @@
 
 
 /*###### RESPONSIVE SETTINGS START ######*/
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 
   .console-container {
     height:max-content;

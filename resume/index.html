@@ -13,30 +13,42 @@
 <body>
 
     <section class="navBar">
-        <a class="navLinx home" href="../index.html">Home</a>
-        <a class="navLinx download" href="CV_IonelCampan_grayscale.pdf" download>b/w print</a>
 
-        <a class="navLinx" href="mailto:campan.ionel@gmail.com">eMail</a>
-        <a class="navLinx" href="https://github.com/icamp" target="_blank">Github</a>
-        <a class="navLinx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
-        <div class="dropdown">
-            <span class="dropbtn navLinx">Menu</span>
-            <div class="dropdown-content">
-                <a class="navLinx" href="../backgroundGenerator/index.html">Background Generator</a>
-                <a class="navLinx" href="../toDoList/index.html">To Do List</a>
-                <a class="navLinx" href="../drumKit/index.html">Drum kit</a>
-                <a class="navLinx" href="../clock/index.html">Clock</a>
-                <a class="navLinx" href="../cssVariables/index.html">CSS Variables</a>
-                <a class="navLinx" href="../flexPanelGallery/index.html">Flex Panels Gallery</a>
-                <a class="navLinx" href="../filterList/index.html">Filtering list</a>
-                <a class="navLinx" href="../HTML5Canvas/index.html">HTML 5 Canvas</a>
-                <!-- <a class="navLinx" href="../multipleSelect/index.html">Multiple select with Shift key</a> -->
-                <a class="navLinx" href="../customVideoPlayer/index.html">Custom Video Player</a>
-                <a class="navLinx" href="../keySequenceDetection/index.html">Konami Code</a>
-                <a class="navLinx" href="../slideInOnScroll/index.html">Sliding Images</a>
-                <a class="navLinx" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a>
+        <div class="left">
+            <h2>Ionel Campan</h2>
+            <a class="navLinx download" href="CV_IonelCampan_grayscale.pdf" download>Download black&white CV</a>
+        </div>
+        
+        <div class="right">
+            <a class="navLinx home" href="../index.html">Home</a>
+            <a class="navLinx" href="mailto:campan.ionel@gmail.com">eMail</a>
+            <a class="navLinx" href="https://github.com/icamp" target="_blank">Github</a>
+            <a class="navLinx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">LinkedIn</a>
+            <ul class="burger" onclick="myFunction(this)">
+                <div class="slice1"></div>
+                <div class="slice2"></div>
+                <div class="slice3"></div>
+            </ul>
+            <div class="dropdown">
+                <span class="dropbtn navLinx">Menu</span>
+                <div class="dropdown-content">
+                    <a class="navLinx" href="../backgroundGenerator/index.html">Background Generator</a>
+                    <a class="navLinx" href="../toDoList/index.html">To Do List</a>
+                    <a class="navLinx" href="../drumKit/index.html">Drum kit</a>
+                    <a class="navLinx" href="../clock/index.html">Clock</a>
+                    <a class="navLinx" href="../cssVariables/index.html">CSS Variables</a>
+                    <a class="navLinx" href="../flexPanelGallery/index.html">Flex Panels Gallery</a>
+                    <a class="navLinx" href="../filterList/index.html">Filtering list</a>
+                    <a class="navLinx" href="../HTML5Canvas/index.html">HTML 5 Canvas</a>
+                    <!-- <a class="navLinx" href="../multipleSelect/index.html">Multiple select with Shift key</a> -->
+                    <a class="navLinx" href="../customVideoPlayer/index.html">Custom Video Player</a>
+                    <a class="navLinx" href="../keySequenceDetection/index.html">Konami Code</a>
+                    <a class="navLinx" href="../slideInOnScroll/index.html">Sliding Images</a>
+                    <a class="navLinx" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a>
+                </div>
             </div>
         </div>
+
     </section>  
 
     <content class="container">
@@ -143,6 +155,11 @@
             </div>
         </main>
     </content>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 </body>
 
 </html>
