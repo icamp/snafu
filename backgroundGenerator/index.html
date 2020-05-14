@@ -12,31 +12,41 @@
 </head>
 <body id="gradient">
     
-    <section class="navBar">
-        <a class="navLinx home" href="../index.html">Home</a>
-        <a class="navLinx" href="../resume/index.html">Resume</a>
-        <a class="navLinx" href="mailto:campan.ionel@gmail.com">eMail</a>
-        <a class="navLinx" href="https://github.com/icamp" target="_blank">Github</a>
-        <a class="navLinx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
-        <div class="dropdown">
-            <span class="dropbtn navLinx">Menu</span>
-            <div class="dropdown-content">
-                <a class="navLinx active" href="../backgroundGenerator/index.html">Background Generator</a>
-                <a class="navLinx" href="../toDoList/index.html">To Do List</a>
-                <a class="navLinx" href="../drumKit/index.html">Drum kit</a>
-                <a class="navLinx" href="../clock/index.html">Clock</a>
-                <a class="navLinx" href="../cssVariables/index.html">CSS Variables</a>
-                <a class="navLinx" href="../flexPanelGallery/index.html">Flex Panels Gallery</a>
-                <a class="navLinx" href="../filterList/index.html">Filtering list</a>
-                <a class="navLinx" href="../HTML5Canvas/index.html">HTML 5 Canvas</a>
-                <!-- <a class="navLinx" href="../multipleSelect/index.html">Multiple select with Shift key</a> -->
-                <a class="navLinx" href="../customVideoPlayer/index.html">Custom Video Player</a>
-                <a class="navLinx" href="../keySequenceDetection/index.html">Konami Code</a>
-                <a class="navLinx" href="../slideInOnScroll/index.html">Sliding Images</a>
-                <a class="navLinx" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a>
+      <header>
+            <div class="logo">
+                  <h1> 
+                        <a class="logo-name navLinx home" href="../index.html"><span>Ionel</span> Campan</a>
+                  </h1>
             </div>
-        </div>
-    </section>  
+            <div class="burger" onclick="burgerX(this)">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+            </div>
+            <ul class="nav">
+                  <li><a class="navLinx" href="CV_IonelCampan_grayscale.pdf" download>Download CV</a></li>
+                  <li><a class="navLinx" href="https://github.com/icamp" target="_blank">Github</a></li>
+                  <li><a class="navLinx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">LinkedIn</a></li>
+                  <li><a class="navLinx" href="mailto:campan.ionel@gmail.com">eMail</a></li>
+                  <li>
+                        <a href="#" class="navLinx apps">Apps</a>
+                        <ul>
+                              <li><a class="navLinx" href="../backgroundGenerator/index.html">Background Generator</a></li>
+                              <li><a class="navLinx" href="../toDoList/index.html">To Do List</a></li>
+                              <li><a class="navLinx" href="../drumKit/index.html">Drum kit</a></li>
+                              <li><a class="navLinx" href="../clock/index.html">Clock</a></li>
+                              <li><a class="navLinx" href="../cssVariables/index.html">CSS Variables</a></li>
+                              <li><a class="navLinx" href="../flexPanelGallery/index.html">Flex Panels Gallery</a></li>
+                              <li><a class="navLinx" href="../filterList/index.html">Filtering list</a></li>
+                              <li><a class="navLinx" href="../HTML5Canvas/index.html">HTML 5 Canvas</a></li>
+                              <li><a class="navLinx" href="../customVideoPlayer/index.html">Custom Video Player</a></li>
+                              <li><a class="navLinx" href="../keySequenceDetection/index.html">Konami Code</a></li>
+                              <li><a class="navLinx" href="../slideInOnScroll/index.html">Sliding Images</a></li>
+                              <li><a class="navLinx" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a></li>
+                        </ul>
+                  </li>
+            </ul>
+      </header>
     
     <h1>Background Generator</h1>
     <input class="color1" type="color" name="color1" value="#00ff00">

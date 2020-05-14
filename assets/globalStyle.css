@@ -1,179 +1,202 @@
 
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
 
+/* ########## CSS VARIABLES ########## */
 :root {
     --yellow: #ffc600;
     --yellow-transparent: rgb(255, 198, 0, 0.8);
     --black: #272727;
     --black-trasparent: rgb(39, 39, 39, 0.9);
+    --cool-grey: #95A3A6;
 }
 
+
+/* ########## PAGE STYLE ########## */
 *,*:before,*:after{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: 'Khula', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* font-family: 'Amatic SC', 'Raleway'; */
 }
 
+
+/* ########## PAGE BACKGROUND ########## */
 body {
     background-image: url(brickWall2.jpg);
-    background-position: bottom right;
+    background-position: top right;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
 
-/* ########## start of navbar style ########## */
-.navBar {
-    display: grid;
-    grid-auto-flow: column;
-    position: sticky;
-    z-index:1;
-    top: 0;
-    background-color: var(--black);
-    border-top: 1px solid var(--yellow-transparent);
+/* ########## NAVBAR STYLE ########## */
+.naviBar {
+      display: flex;
+      padding: 12px;
+      background-color: var(--black);
+      position: sticky;
+      top: 0;
 }
 
-.left, .right {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 25px;
-}
+      .navLinks {
+            display: flex;
+            margin-left: auto;
+      }
 
-.left h2 {
-  letter-spacing: 1px;
-  font-size: 1.6rem;
-  color: #959494;
-}
-  
-  /* ########## BURGER JOINT ########## */
+      .apps ul {
+            display: none;
+            /* position: relative; */
+      }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #959494;
-  margin: 4px 0;
-}
+      .apps:hover ul {
+            display: block;
+            list-style: none;
+            display: block;
+            /* margin-right: 100px; */
 
+      }
+
+            .apps ul li {
+                  padding: 7px;
+                  background-color: var(--black-trasparent);
+            }
+
+      .navLink {
+            color: var(--cool-grey);
+            /* color: var(--yellow); */
+            opacity: 86%;
+            margin-left: 1em;
+            margin-right: 1em;
+            font-size: 1.1rem;
+            text-decoration: none;
+      }
+
+            .navLink:hover {
+                  color: var(--yellow);
+                  opacity: 100%;
+                  border-bottom: 1px solid var(--yellow);
+            }
+
+      .home {
+            font-size: 1.6rem;
+      }
+
+            .home > span {
+                  color: var(--yellow);
+            }
+
+      .active {
+            color: var(--yellow);
+            border-bottom: 1px solid var(--yellow);
+      }
+
+
+/* ########## BURGER STYLE ########## */
 .burger {
-  display: inline-block;
-  cursor: pointer;
-  /* border: 1px solid red; */
-}
+      /* display: inline-block; */
+      display: none;
+      cursor: pointer;
+      margin-right: 25px;
+    }
+    
+    .slice1, .slice2, .slice3 {
+      width: 35px;
+      height: 5px;
+      background-color: var(--cool-grey);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    /* Rotate first bar */
+    .change .slice1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+      background-color: red;
+    }
+    
+    /* Fade out the second bar */
+    .change .slice2 {
+      opacity: 0;
+    }
+    
+    /* Rotate last bar */
+    .change .slice3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+      transform: rotate(45deg) translate(-8px, -8px) ;
+      background-color: red;
+    }
 
-.slice1, .slice2, .slice3 {
-  width: 25px;
-  height: 3px;
-  background-color: #959494;
-  margin: 4px 0;
-  transition: 0.4s;
-}
 
-/* Rotate first bar */
-.change .slice1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 4px) ;
-  transform: rotate(-45deg) translate(-6px, 5px) ;
-}
+/* ##### MEDIA QUERIES ##### */
+@media only screen and (max-width: 666px) {
+      .naviBar {
+            display: flex;
+            flex-wrap: wrap;
+      }
+      
+      .miniBar {
+            display: flex;
+            width: 100vw;
+      }
+      
+      .burger {
+            /* display: block; */
+            /* display: flex;
+            flex-direction: column; */
+            display: inline-block;
+            margin-left: auto;
+      }
+      
+      .navLinks {
+            display: none;
+      }
 
-/* Fade out the second bar */
-.change .slice2 {
-  opacity: 0;
-}
+      .navLinksShow {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+            padding: 1px;
+      }
 
-/* Rotate last bar */
-.change .slice3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-5px, -5px) ;
-}
-/* ########## BURGER JOINT ########## */
+      .apps ul {
+            display: flex;
+            flex-direction: column;
+            /* text-align: center; */
+            list-style: none;
+            text-decoration: none;
+            opacity: 70%;
+            border: .5px solid var(--yellow);
+      }
 
-.navLinx {
-    color: #959494;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: .3rem;
-    width: max-content;
+            .apps > a:first-child {
+                  display: flex;
+                  justify-content: center;
+            }
 }
-
-.navLinx:hover {
-  color: var(--yellow);
-}
-
-.download {
-  color: var(--black-trasparent);
-  background-color: gray;
-  margin-right: 10px;
-}
-/* ########## end of navbar style ########## */
 
 
 /* ########## start of global links style ########## */
 .linx {
-    color: #959494;
-    text-decoration: none; 
-    justify-self: center;
-    margin: 10px;
-    border-bottom: 2px solid transparent;
-}
-
-.linx:hover {
-    color: var(--yellow);
-    border-bottom: 2px solid var(--yellow);
-}
-/* ########## end of global links style ########## */
-
-
-/* ########## DROPDOWN START ########## */
-.dropbtn {
-    cursor: pointer;
+      color: #959494;
+      text-decoration: none; 
+      justify-self: center;
+      margin: 10px;
+      border-bottom: 2px solid transparent;
   }
   
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+  .linx:hover {
+      color: var(--yellow);
+      border-bottom: 2px solid var(--yellow);
+  }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--black);
-  min-width: 160px;
-  width: max-content;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+  * {
+      list-style: none;
+  }
+  /* ########## end of global links style ########## */
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: var(--yellow);
-  padding: 6px 8px;
-  text-decoration: none;
-  display: block;
-  text-align: start;
-  border: 2px solid black;
-  width: auto;
-}
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {border: 2px dotted var(--yellow)}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: var(--yellow-transparent);
-  color: var(--black-trasparent);
-}
-
-.active {
-  border: 2px solid var(--yellow) !important;
-}
-/* ########## DROPDOWN END ########## */
