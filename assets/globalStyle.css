@@ -51,16 +51,21 @@ body {
       }
 
       .apps:hover ul {
-            display: block;
-            list-style: none;
+            /* list-style: none; */
+            border: 1px solid var(--yellow);
+            margin: 0px;
             display: block;
             /* margin-right: 100px; */
-
+            position: absolute;
+            width: max-content;
+            transform: translate(-70%);
+            max-height:100vh;
+            overflow:scroll;      
       }
 
             .apps ul li {
                   padding: 7px;
-                  background-color: var(--black-trasparent);
+                  background-color: var(--black-trasparent);          
             }
 
       .navLink {
@@ -169,11 +174,26 @@ body {
             text-decoration: none;
             opacity: 70%;
             border: .5px solid var(--yellow);
+            transform: unset;
+            
+            max-height:100vh;
+            overflow:scroll;      
       }
 
             .apps > a:first-child {
                   display: flex;
                   justify-content: center;
+            }
+
+            .apps:hover ul {
+                  /* list-style: none; */
+                  /* border: 1px solid var(--yellow); */
+                  /* margin: 0px; */
+                  /* display: block; */
+                  /* margin-right: 100px; */
+                  /* position: absolute; */
+                  /* width: max-content; */
+                  /* transform: translate(-70%); */
             }
 }
 
