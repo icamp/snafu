@@ -1,5 +1,209 @@
 
-/*###### START OF FANCY TITLE ######*/
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+/* ########## CSS VARIABLES ########## */
+:root {
+    --yellow: #ffc600;
+    --yellow-transparent: rgb(255, 198, 0, 0.8);
+    --black: #272727;
+    --black-trasparent: rgb(39, 39, 39, 0.9);
+    --cool-grey: #95A3A6;
+}
+
+
+/* ########## PAGE STYLE ########## */
+*,*:before,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Khula', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Amatic SC', 'Raleway'; */
+    list-style: none;
+}
+
+
+/* ########## PAGE BACKGROUND ########## */
+body {
+    background-image: url(brickWall2.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* ########## MASTER STYLE ########## */
+* {
+      color: var(--cool-grey);
+}
+
+.card {
+      background-color: var(--black-trasparent);
+      border-radius: 7px;
+      margin: 4em 14em;
+      padding: 2em 4em;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+}
+
+      .card:hover {
+            background-color: var(--black);
+            border-right: 2px solid var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+      }
+
+
+
+.linx {
+      text-decoration: none; 
+      justify-self: center;
+      border-bottom: 2px solid var(--black-trasparent);
+      }
+      
+      .linx:hover {
+            color: var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+      }
+      
+
+/*###### HEADER STYLE ######*/
+.cta {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      margin: 0em 4em;
+      text-align: center;
+      padding: .5em;
+}
+
+
+/* ###### HERO of the story ###### */
+.hero {
+      display: grid;
+      margin-bottom: 0;
+}
+
+      .hero h4 {
+            font-size: 1.5rem;
+      }
+
+      .hero .name {
+            letter-spacing: 2px;
+            font-size: 4rem;
+      }
+
+      .hero span {
+            color: var(--yellow);
+      }
+
+
+/* ###### CONTENT STYLE ###### */
+.button-card {
+      padding-top: 0;
+      padding-bottom: 0;
+}
+
+.collapsible {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-size: 1.3rem;
+      background-color:unset;
+      width: 100%;
+      text-align: left;
+      height: 3em;
+}
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .collapsible:hover {
+             color: var(--yellow);
+             }
+    
+/* Style the collapsible content. Note: hidden by default */
+.content {
+      display: none;
+      grid-template-columns: repeat(2, minmax(300px, 600px));
+      gap: 3em;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 0;
+      padding: 2em 0em;
+      background-color: unset !important;
+      }
+
+      .content h2 {
+            color: var(--yellow);
+      }
+
+.card-app {
+      border: 1px solid var(--yellow-transparent);
+      padding: 1em;
+      border-radius: 6px;
+}
+      .card-app:hover {
+            background-color: var(--black-trasparent);
+      }
+
+      .card-app a, p:nth-child(4) {
+            margin-left: 20px;
+            float: right;
+      }
+
+
+/* ###### MEDIA QUERRIES ###### */
+
+@media only screen and (max-width: 1440px) {
+      .card:not(:first-child) {
+            margin: 4em 8em;
+      }
+}
+
+@media only screen and (max-width: 1024px) {
+      .card:not(:first-child) {
+            margin: 4em 4em;
+      }
+
+      .content {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+/*###### SCRIPTED TITLE STYLE ######*/
 /* @import url(https://fonts.googleapis.com/css?family=Khula:700); */
 /* body {
   background: #111;
@@ -8,122 +212,23 @@
   opacity:0;
 } */
 .console-container {
-  font-size:4em;
-  /* text-align:center; */
-  height:200px;
-  width:600px;
-  /* display:block;
-  position:absolute; */
-  color:white;
-  /* top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:auto; */
-}
-
-.console-underscore {
-  display:inline-block;
-  /* position:relative; */
-  /* top:-0.14em; */
-  /* left:10px; */
-}
-/*###### END OF FANCY TITLE ######*/
-
-
-/*###### HEADER SETTINGS START ######*/
-.name {
-    display: grid;
-    grid-template-rows: 100vh;
-    align-items: center;
-    justify-items: center;
-    background-color: var(--black);
-}
-/*###### HEADER SETTINGS END ######*/
-
-
-/*###### MENU BAR SETTINGS START ######*/
-/* .navBar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    z-index:1;
-    top: 0;
-    background-color: var(--black);
-} */
-/*###### MENU BAR SETTINGS END ######*/
-
-
-/*###### CONTENT SETTINGS START ######*/
-.content {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-  grid-template-columns: repeat(2, minmax(300px, 600px));
-  justify-content: center;
-  grid-gap: 4rem;
-  padding: 20px;
-}
-/*###### CONTENT SETTINGS END ######*/
-
-
-/*###### CARDS SETTINGS START ######*/
-.card {
-  background: var(--black-trasparent);
-  /* color: var(--yellow-transparent); */
-  color: #959494;
-  border-radius: 15px;
-  padding: 10px;
-  opacity: 0.9; 
-  border-bottom: 2px solid var(--black-trasparent);
-  border-right: 2px solid var(--black-trasparent);
-}
-
-.card:hover{
-  border-bottom: 2px solid var(--yellow);
-  border-right: 2px solid var(--yellow);
-  opacity: 1;
-  color: var(--yellow-transparent);
-}
-/*###### CARDS SETTINGS END ######*/
-
-
-
-/*###### ELEMENTS SETTINGS START ######*/
-* > h2 {
-  text-decoration: underline;
-  color: var(--yellow-transparent);
-}
-
-
-/* .linx {
-    color: var(--yellow-transparent);
-    color: #959494;
-    text-decoration: none;
-    justify-self: center;
-    margin: 10px;
-    border-bottom: 2px solid transparent;
-}
-.linx:hover {
-    color: var(--yellow);
-    border-bottom: 2px solid var(--yellow);
-} */
-/*###### ELEMENTS SETTINGS END ######*/
-
-
-
-/*###### RESPONSIVE SETTINGS START ######*/
-@media (max-width: 1024px) {
-
-  .console-container {
-    height:max-content;
-    width:85vw;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-/*###### RESPONSIVE SETTINGS END ######*/
+      font-size:4em;
+      /* text-align:center; */
+      height:200px;
+      width:600px;
+      /* display:block;
+      position:absolute; */
+      color:white;
+      /* top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      margin:auto; */
+    }
+    
+    .console-underscore {
+      display:inline-block;
+      /* position:relative; */
+      /* top:-0.14em; */
+      /* left:10px; */
+    }

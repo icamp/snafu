@@ -1,4 +1,6 @@
-
+* {
+      list-style: none;
+}
 .container {
     max-width: 21cm;
     /* max-height: 29.7cm; */
@@ -79,7 +81,7 @@ progress::-webkit-progress-value { background: silver; }
 
 /* ########################################### */
 
-@media print {
+@media only print {
     body, html {
         margin: 0;
         padding: 0; 

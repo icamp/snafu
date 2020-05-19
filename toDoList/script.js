@@ -1,7 +1,7 @@
 // caching selectors in a variable
 var button = document.getElementById("enter");      // the enter button
 var input = document.getElementById("userInput");   // the text input box
-var ul = document.querySelector("ul");              // the list of items
+var ul = document.querySelector(".memento");              // the list of items
 var remove = document.querySelectorAll('.trash');   // the item delete button
 
 

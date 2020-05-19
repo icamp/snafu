@@ -30,14 +30,20 @@ body {
     background-size: cover;
 }
 
+* {
+      list-style: none;
+}
+
 
 /* ########## NAVBAR STYLE ########## */
 .naviBar {
       display: flex;
+      align-items: flex-end;
       padding: 12px;
       background-color: var(--black);
       position: sticky;
       top: 0;
+      z-index: 1;
 }
 
       .navLinks {
@@ -52,7 +58,7 @@ body {
 
       .apps:hover ul {
             /* list-style: none; */
-            border: 1px solid var(--yellow);
+            text-decoration: underline var(--yellow);
             margin: 0px;
             display: block;
             /* margin-right: 100px; */
@@ -65,12 +71,11 @@ body {
 
             .apps ul li {
                   padding: 7px;
-                  background-color: var(--black-trasparent);          
+                  background-color: var(--black-trasparent);   
             }
 
       .navLink {
             color: var(--cool-grey);
-            /* color: var(--yellow); */
             opacity: 86%;
             margin-left: 1em;
             margin-right: 1em;
@@ -81,7 +86,7 @@ body {
             .navLink:hover {
                   color: var(--yellow);
                   opacity: 100%;
-                  border-bottom: 1px solid var(--yellow);
+                  text-decoration: underline var(--yellow);
             }
 
       .home {
@@ -94,7 +99,7 @@ body {
 
       .active {
             color: var(--yellow);
-            border-bottom: 1px solid var(--yellow);
+            text-decoration: underline var(--yellow);
       }
 
 
@@ -135,13 +140,13 @@ body {
 
 
 /* ##### MEDIA QUERIES ##### */
-@media only screen and (max-width: 666px) {
+@media only screen and (max-width: 768px) {
       .naviBar {
             display: flex;
             flex-wrap: wrap;
       }
       
-      .miniBar {
+      .logo {
             display: flex;
             width: 100vw;
       }
@@ -167,55 +172,29 @@ body {
       }
 
       .apps ul {
-            display: flex;
-            flex-direction: column;
-            /* text-align: center; */
+            /* display: flex; */
+            /* flex-direction: column; */
             list-style: none;
             text-decoration: none;
             opacity: 70%;
             border: .5px solid var(--yellow);
-            transform: unset;
-            
-            max-height:100vh;
-            overflow:scroll;      
       }
 
             .apps > a:first-child {
-                  display: flex;
-                  justify-content: center;
+                  /* display: flex; */
+                  /* justify-content: center; */
+                  margin: auto;
             }
 
             .apps:hover ul {
-                  /* list-style: none; */
-                  /* border: 1px solid var(--yellow); */
-                  /* margin: 0px; */
-                  /* display: block; */
-                  /* margin-right: 100px; */
-                  /* position: absolute; */
-                  /* width: max-content; */
-                  /* transform: translate(-70%); */
+                  position: absolute;
+                  transform: translate(-35%);
+                  opacity: 100%;
+                  max-height:100vh;
+                  overflow-y:scroll;  
+                  padding: 0px;    
             }
 }
-
-
-/* ########## start of global links style ########## */
-.linx {
-      color: #959494;
-      text-decoration: none; 
-      justify-self: center;
-      margin: 10px;
-      border-bottom: 2px solid transparent;
-  }
-  
-  .linx:hover {
-      color: var(--yellow);
-      border-bottom: 2px solid var(--yellow);
-  }
-
-  * {
-      list-style: none;
-  }
-  /* ########## end of global links style ########## */
 
 
 

@@ -2,39 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flex Panels 💪</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
   <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico"/>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../assets/globalStyle.css">
+  <link rel="stylesheet" href="../assets/navBarStyle.css">
   <link rel="stylesheet" href="style.css">
+  
+  <title>icamp | flexPanels💪</title>
 </head>
 <body>
 
-  <section class="navBar">
-    <a class="navLinx home" href="../index.html">Home</a>
-    <a class="navLinx" href="../resume/index.html">Resume</a>
-    <a class="navLinx" href="mailto:campan.ionel@gmail.com">eMail</a>
-    <a class="navLinx" href="https://github.com/icamp" target="_blank">Github</a>
-    <a class="navLinx" href="https://www.linkedin.com/in/ionel-campan/" target="_blank">Linkedin</a>
-    <div class="dropdown">
-        <span class="dropbtn navLinx">Menu</span>
-        <div class="dropdown-content">
-            <a class="navLinx" href="../backgroundGenerator/index.html">Background Generator</a>
-            <a class="navLinx" href="../toDoList/index.html">To Do List</a>
-            <a class="navLinx" href="../drumKit/index.html">Drum kit</a>
-            <a class="navLinx" href="../clock/index.html">Clock</a>
-            <a class="navLinx" href="../cssVariables/index.html">CSS Variables</a>
-            <a class="navLinx active" href="../flexPanelGallery/index.html">Flex Panels Gallery</a>
-            <a class="navLinx" href="../filterList/index.html">Filtering list</a>
-            <a class="navLinx" href="../HTML5Canvas/index.html">HTML 5 Canvas</a>
-            <!-- <a class="navLinx" href="../multipleSelect/index.html">Multiple select with Shift key</a> -->
-            <a class="navLinx" href="../customVideoPlayer/index.html">Custom Video Player</a>
-            <a class="navLinx" href="../keySequenceDetection/index.html">Konami Code</a>
-            <a class="navLinx" href="../slideInOnScroll/index.html">Sliding Images</a>
-            <a class="navLinx" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a>
-        </div>
-    </div>
-  </section>  
+      <header class="naviBar">
+            
+            <div class="logo">
+                  <a href="../index.html" class="navLink home"><span>Ionel</span>  Campan</a>
+                  <!-- <button class="burger" id="burgerMenu">menu</button> -->
+                  <div class="burger" id="burgerMenu"  onclick="burgerX(this)">
+                        <div class="slice1"></div>
+                        <div class="slice2"></div>
+                        <div class="slice3"></div>
+                      </div>
+            </div>
+
+            <div class="navLinks" id="menu">
+                  <a href="../resume/index.html" class="navLink">Resume</a>
+                  <a href="https://github.com/icamp" target="_blank" class="navLink">Github</a>
+                  <a href="https://www.linkedin.com/in/ionel-campan/" target="_blank" class="navLink">LinkedIn</a>
+                  <a href="mailto:campan.ionel@gmail.com" class="navLink">eMail</a>
+                  <div class="apps">
+                        <a href="#" class="navLink">Apps &#11167;</a>
+                        <ul>
+                              <li><a class="navLink" href="../backgroundGenerator/index.html">Background Generator</a></li>
+                              <li><a class="navLink" href="../toDoList/index.html">To Do List</a></li>
+                              <li><a class="navLink" href="../drumKit/index.html">Drum kit</a></li>
+                              <li><a class="navLink" href="../clock/index.html">Clock</a></li>
+                              <li><a class="navLink" href="../cssVariables/index.html">CSS Variables</a></li>
+                              <li><a class="navLink active" href="../flexPanelGallery/index.html">Flex Panels Gallery</a></li>
+                              <li><a class="navLink" href="../filterList/index.html">Filtering list</a></li>
+                              <li><a class="navLink" href="../HTML5Canvas/index.html">HTML 5 Canvas</a></li>
+                              <li><a class="navLink" href="../customVideoPlayer/index.html">Custom Video Player</a></li>
+                              <li><a class="navLink" href="../keySequenceDetection/index.html">Konami Code</a></li>
+                              <li><a class="navLink" href="../slideInOnScroll/index.html">Sliding Images</a></li>
+                              <li><a class="navLink" href="https://icamp.github.io/robofriends/" target="_blank">Robofriends</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </header> 
 
   <div class="panels">
     <div class="panel panel1">
@@ -65,6 +79,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="../assets/navBarScript.js"></script>
 
 </body>
 </html>

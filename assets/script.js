@@ -1,4 +1,59 @@
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "grid") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "grid";
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function dynamicTitle() {
 //     if (document.getElementById("hero").innerHTML == 'a developer') {
 //         document.getElementById("hero").innerHTML = "ionel".padStart(6, ' .');
@@ -11,53 +66,53 @@
 
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Hello World.', 'I am Ionel', "I'm a developer"], 'text',['white','var(--yellow)','tomato']);
+// consoleText(['Hello World.', 'I am Ionel', "I'm a developer"], 'text',['white','var(--yellow)','tomato']);
 
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function() {
+// function consoleText(words, id, colors) {
+//   if (colors === undefined) colors = ['#fff'];
+//   var visible = true;
+//   var con = document.getElementById('console');
+//   var letterCount = 1;
+//   var x = 1;
+//   var waiting = false;
+//   var target = document.getElementById(id)
+//   target.setAttribute('style', 'color:' + colors[0])
+//   window.setInterval(function() {
 
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
-        target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function() {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
-    }
-  }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
+//     if (letterCount === 0 && waiting === false) {
+//       waiting = true;
+//       target.innerHTML = words[0].substring(0, letterCount)
+//       window.setTimeout(function() {
+//         var usedColor = colors.shift();
+//         colors.push(usedColor);
+//         var usedWord = words.shift();
+//         words.push(usedWord);
+//         x = 1;
+//         target.setAttribute('style', 'color:' + colors[0])
+//         letterCount += x;
+//         waiting = false;
+//       }, 1000)
+//     } else if (letterCount === words[0].length + 1 && waiting === false) {
+//       waiting = true;
+//       window.setTimeout(function() {
+//         x = -1;
+//         letterCount += x;
+//         waiting = false;
+//       }, 1000)
+//     } else if (waiting === false) {
+//       target.innerHTML = words[0].substring(0, letterCount)
+//       letterCount += x;
+//     }
+//   }, 120)
+//   window.setInterval(function() {
+//     if (visible === true) {
+//       con.className = 'console-underscore hidden'
+//       visible = false;
 
-    } else {
-      con.className = 'console-underscore'
+//     } else {
+//       con.className = 'console-underscore'
 
-      visible = true;
-    }
-  }, 400)
-}
+//       visible = true;
+//     }
+//   }, 400)
+// }

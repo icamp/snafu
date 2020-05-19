@@ -18,3 +18,11 @@ addEventListener("resize", () => {
             menu.className = "navLinks";
       }
 });
+
+// Menu button animation script
+/*
+            to be moved from HTML file to here
+*/
+function burgerX(x) {
+      x.classList.toggle("change");
+}

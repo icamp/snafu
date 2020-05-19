@@ -9,7 +9,6 @@ let hint = document.getElementById("info");
 
 // remove the hint 
 function infoRemove() {
-  console.log("clicking");
   hint.remove();
 };
 
