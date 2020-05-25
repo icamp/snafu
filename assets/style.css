@@ -153,14 +153,22 @@ body {
 /* ###### MEDIA QUERRIES ###### */
 
 @media only screen and (max-width: 1440px) {
-      .card:not(:first-child) {
+      .card {
             margin: 4em 8em;
+      }
+
+      .cta {
+            margin-top: 0;
       }
 }
 
 @media only screen and (max-width: 1024px) {
-      .card:not(:first-child) {
+      .card {
             margin: 4em 4em;
+      }
+
+      .cta {
+            margin-top: 0;
       }
 
       .content {
@@ -174,7 +182,7 @@ body {
             padding: 1em;
       }
 
-      .card:first-child {
+      .cta {
             margin: 0em 1em 1em 1em;
       }
 
