@@ -169,13 +169,26 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-      .card:not(:first-child) {
-            margin: 2em 1em;
+      .card {
+            margin: 1em 1em;
+            padding: 1em;
+      }
+
+      .card:first-child {
+            margin: 0em 1em 1em 1em;
+      }
+
+      .collapsible {
+            margin-bottom: 1.5em;
       }
 
       .content {
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
+
+      .hero .name {
+            font-size: 3rem;
+      }
 }
 
 
