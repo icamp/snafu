@@ -168,6 +168,16 @@ body {
             }
 }
 
+@media only screen and (max-width: 800px) {
+      .card:not(:first-child) {
+            margin: 2em 1em;
+      }
+
+      .content {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+}
+
 
 
 
@@ -211,24 +221,24 @@ body {
 /* .hidden {
   opacity:0;
 } */
-.console-container {
-      font-size:4em;
+/* .console-container { */
+      /* font-size:4em; */
       /* text-align:center; */
-      height:200px;
-      width:600px;
+      /* height:200px; */
+      /* width:600px; */
       /* display:block;
       position:absolute; */
-      color:white;
+      /* color:white; */
       /* top:0;
       bottom:0;
       left:0;
       right:0;
       margin:auto; */
-    }
+    /* } */
     
-    .console-underscore {
-      display:inline-block;
+    /* .console-underscore { */
+      /* display:inline-block; */
       /* position:relative; */
       /* top:-0.14em; */
       /* left:10px; */
-    }
+    /* } */
