@@ -169,8 +169,13 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-      .card:not(:first-child) {
-            margin: 2em 1em;
+      .card {
+            margin: 1em 1em;
+            padding: 1em;
+      }
+
+      .card:first-child {
+            margin: 0em 1em 1em 1em;
       }
 
       .content {
