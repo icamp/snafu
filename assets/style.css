@@ -92,7 +92,7 @@ body {
             font-size: 4rem;
       }
 
-      .hero span {
+      .hero span:not(:first-child) {
             color: var(--yellow);
       }
 
@@ -195,7 +195,20 @@ body {
             }
 
       .hero .name {
+            /* letter-spacing: 1px; */
             font-size: 3rem;
+      }
+
+      .motherfucker {
+            /* margin-right: 110px; */
+      }
+
+      h4, h1 {
+            margin-bottom: 20px;
+      }
+
+      h1 {
+            line-height: 1.1em;
       }
 }
 
