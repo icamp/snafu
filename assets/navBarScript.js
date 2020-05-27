@@ -19,9 +19,11 @@ addEventListener("resize", () => {
       }
 });
 
+
 // Menu button animation script
 /*
-            to be moved from HTML file to here
+      to fix X showing after transition from mobile to desktop 
+      then back to mobile while dropdown menu is open
 */
 function burgerX(x) {
       x.classList.toggle("change");
