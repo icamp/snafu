@@ -128,7 +128,7 @@ progress::-webkit-progress-value { background: silver; }
       }
 
     .print {
-        display: initial;
+        display: inline;
     }
 
     .screen {
