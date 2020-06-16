@@ -27,6 +27,7 @@
     flex: 5;
     padding-top: 1rem;
     background: silver;
+    padding-bottom: 1em;
 }
 
       .story ul li {
@@ -49,6 +50,10 @@
 .title {
     color: #C8A268;
     letter-spacing: 1px;
+}
+
+.cta {
+      height: 8px;
 }
 
 .pos {
@@ -93,7 +98,7 @@ progress::-webkit-progress-value { background: silver; }
     body, html {
         margin: 0;
         padding: 0; 
-        zoom: 90%;
+        zoom: 93%;
     }
 
     body > *:not(.container) {
@@ -111,14 +116,19 @@ progress::-webkit-progress-value { background: silver; }
     
     .hero {
         border-right: 2px solid black;
+        
     }
 
-      .hero a, .hero p {
-            font-family: 'Open Sans', sans-serif;
+            .hero a, .hero p {
+                  font-family: 'Open Sans', sans-serif;
+            }
+
+      .story {
+            padding-bottom: 0px;
       }
 
     .print {
-        display: inherit;
+        display: initial;
     }
 
     .screen {
