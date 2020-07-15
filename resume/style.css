@@ -127,6 +127,12 @@ progress::-webkit-progress-value { background: silver; }
             padding-bottom: 0px;
       }
 
+            .story .title {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                opacity: 30%;
+            }
+
     .print {
         display: inline;
     }
