@@ -15,5 +15,15 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
+// make pointing finger blink
+let message = () => {
+    let fingerPointer = document.getElementById("pointingFinger");
+    fingerPointer.style.color="var(--yellow)";
+    setTimeout(( () => fingerPointer.style.color=""), 1000);
+};
+
+window.setInterval( () => {
+    message();
+  }, 2000);
 
 
