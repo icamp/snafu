@@ -86,6 +86,10 @@ body {
             font-size: 1.5rem;
       }
 
+        .hero h4 span {
+            color: var(--yellow);
+        }
+
       .hero .name {
             letter-spacing: 2px;
             font-size: 4rem;
@@ -117,6 +121,10 @@ body {
       .collapsible:hover {
              color: var(--yellow);
              }
+
+       .collapsible .pointingFinger {
+           color: red;
+       }
     
 /* Style the collapsible content. Note: hidden by default */
 .content {
