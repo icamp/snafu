@@ -45,6 +45,11 @@
     padding: .8rem;
 }
 
+    .card ul li {
+        padding-left: .3rem;
+        border-left: 1px solid #595F67;
+    }
+    
 /* ########################################### */
 
 .title {
@@ -123,15 +128,19 @@ progress::-webkit-progress-value { background: silver; }
                   font-family: 'Open Sans', sans-serif;
             }
 
-      .story {
-            padding-bottom: 0px;
-      }
+    .story {
+        padding-bottom: 0px;
+    }
 
-            .story .title {
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                opacity: 30%;
-            }
+        .story .title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 30%;
+        }
+
+        .story .card ul li {
+            border-left: 1px solid black;
+        }
 
     .print {
         display: inline;
