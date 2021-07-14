@@ -46,11 +46,9 @@ body {
 }
 
       .card:hover {
-            background-color: var(--black);
             border-right: 2px solid var(--yellow);
             border-bottom: 2px solid var(--yellow);
       }
-
 
 
 .linx {
@@ -143,12 +141,13 @@ body {
       }
 
 .card-app {
-      border: 1px solid var(--yellow-transparent);
+      border: 1px solid var(--cool-grey);
       padding: 1em;
       border-radius: 6px;
 }
       .card-app:hover {
-            background-color: var(--black-trasparent);
+            background-color: var(--black);
+            border: 1px solid var(--yellow);
       }
 
       .card-app a, p:nth-child(4) {
@@ -156,6 +155,8 @@ body {
             float: right;
       }
 
+      
+      
 
 /* ###### MEDIA QUERRIES ###### */
 
